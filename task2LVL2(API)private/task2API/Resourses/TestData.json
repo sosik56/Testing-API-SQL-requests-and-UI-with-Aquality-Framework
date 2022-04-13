@@ -1,10 +1,7 @@
 {
-    "FirstRequst": "https://jsonplaceholder.typicode.com/posts",
-    "SecondRequest": "https://jsonplaceholder.typicode.com/posts/99",
-    "ThirdRequest": "https://jsonplaceholder.typicode.com/posts/150",
-    "FourRequest": "https://jsonplaceholder.typicode.com/posts",
-    "FiveRequest": "https://jsonplaceholder.typicode.com/users",
-    "SixRequest": "https://jsonplaceholder.typicode.com/users/5",
+    "url": "https://jsonplaceholder.typicode.com/",
+    "postsEnd": "posts",
+    "usersEnd": "users",   
     "getPostId1": "{\n  \"userId\": 10,\n  \"id\": 99,\n  \"title\": \"temporibus sit alias delectus eligendi possimus magni\",\n  \"body\": \"quo deleniti praesentium dicta non quod\\naut est molestias\\nmolestias et officia quis nihil\\nitaque dolorem quia\"\n}",
     "getUsers5": "{\n  \"id\": 5,\n  \"name\": \"Chelsey Dietrich\",\n  \"username\": \"Kamren\",\n  \"email\": \"Lucio_Hettinger@annie.ca\",\n  \"address\": {\n    \"street\": \"Skiles Walks\",\n    \"suite\": \"Suite 351\",\n    \"city\": \"Roscoeview\",\n    \"zipcode\": \"33263\",\n    \"geo\": {\n      \"lat\": \"-31.8129\",\n      \"lng\": \"62.5342\"\n    }\n  },\n  \"phone\": \"(254)954-1289\",\n  \"website\": \"demarco.info\",\n  \"company\": {\n    \"name\": \"Keebler LLC\",\n    \"catchPhrase\": \"User-centric fault-tolerant solution\",\n    \"bs\": \"revolutionize end-to-end systems\"\n  }\n}"
 }

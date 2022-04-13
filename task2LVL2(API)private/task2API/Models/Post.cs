@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace task2LVL2_API_private.Models
+namespace task2API.Models
 {
     public class Post
     {
@@ -8,7 +8,7 @@ namespace task2LVL2_API_private.Models
 
         [JsonProperty("id")]
         public int Id { get; set; }
-        public string Title { get; set; }        
+        public string Title { get; set; }
         public string Body { get; set; }
     }
 }

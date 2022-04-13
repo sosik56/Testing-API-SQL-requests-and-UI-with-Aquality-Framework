@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>task2LVL2_API_private</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
