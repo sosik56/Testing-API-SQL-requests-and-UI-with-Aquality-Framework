@@ -7,10 +7,12 @@
 
   <ItemGroup>
     <None Remove="Resources\data.json" />
+    <None Remove="Resources\sqlRequest.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\data.json" />
+    <EmbeddedResource Include="Resources\sqlRequest.json" />
   </ItemGroup>
 
   <ItemGroup>

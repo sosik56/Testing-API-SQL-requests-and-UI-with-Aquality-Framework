@@ -1,0 +1,6 @@
+{
+    "sqlRequest1": "SELECT  project.name AS PROJECT, test.name AS TEST, MIN(end_time - start_time) AS MIN_WORKING_TIME FROM union_reporting.test join union_reporting.project ON test.project_id = project.id GROUP BY TEST ORDER BY PROJECT,TEST;",
+    "sqlRequest2": "SELECT project.name AS PROJECT, COUNT(distinct(test.name)) AS TEST_COUNT FROM union_reporting.test join union_reporting.project ON test.project_id = project.id GROUP BY project.name;",
+    "sqlRequest3": "SELECT  project.name AS PROJECT, test.name AS TEST, start_time  FROM union_reporting.test join union_reporting.project ON test.project_id = project.id WHERE date(start_time) < '2016-10-13' ORDER BY PROJECT,TEST;",
+    "sqlRequest4": "SELECT  browser, COUNT(name) from union_reporting.test WHERE browser ='chrome' UNION SELECT browser, COUNT(name) as TestPerBrowser from union_reporting.test WHERE browser='firefox' group by browser;"
+}

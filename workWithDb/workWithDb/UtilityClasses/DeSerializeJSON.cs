@@ -3,7 +3,6 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 
-
 namespace workWithDb.UtilityClasses
 {
     public static  class DeSerializeJSON

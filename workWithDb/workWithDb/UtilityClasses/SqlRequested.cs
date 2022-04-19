@@ -1,12 +1,12 @@
 ﻿using System.Text;
 using MySql.Data.MySqlClient;
-using System.IO;
+using System;
 
 namespace workWithDb.UtilityClasses
 {
     public static class SqlRequested
     {
-        public static void ExecuteSqlRequestFromDB(string host, string dbname, string user, string password, string sqlRequest, string fileName)
+        public static StringBuilder ExecuteSqlRequestFromDB(string host, string dbname, string user, string password, string sqlRequest)
         {
             string connectionString = $"server={host};" +
                                       $"user={user};" +
@@ -18,31 +18,29 @@ namespace workWithDb.UtilityClasses
                 sqlConn.Open();
                 MySqlCommand sqlComm = new MySqlCommand(sqlRequest, sqlConn);
                 MySqlDataReader reader = sqlComm.ExecuteReader();
-
-                StringBuilder answer = new StringBuilder();
-
-                using (StreamWriter sw = new StreamWriter(fileName))
-                {
-                    sw.WriteLine("***********************************");
+                
+                StringBuilder answer = new StringBuilder();           
+                               
+                    string header = "";
                     for (int i = 0; i < reader.FieldCount; i++)
                     {
-                        answer.Append(reader.GetName(i) + "|");
-                        answer.Append("{0, -20}|");
-                    }
-                    sw.WriteLine(answer);
-
+                        header += String.Format("{0,-130}", reader.GetName(i));                                              
+                    }                   
+                    answer.AppendLine(header);
+                    answer.AppendLine();
 
                     while (reader.Read())
                     {
                         string str = "";
                         for (int i = 0; i < reader.FieldCount; i++)
                         {
-                            str += reader[i].ToString() + "|";
-                        }
-                        sw.WriteLine("{0, -20}|", str);                       
+                            str += String.Format("{0,-130}", reader[i].ToString());
+                        }                        
+                        answer.AppendLine(str);
                         str = null;
                     }
-                }
+                    
+                    return answer;                
             }
         }
     }
