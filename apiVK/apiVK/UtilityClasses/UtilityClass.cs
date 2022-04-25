@@ -8,7 +8,7 @@ namespace apiVK.UtilityClasses
 {
     public static class UtilityClass
     {
-        private const string data = "apiVK.Resourses.TestData.json";
+        private const string data = "apiVK.Resources.TestData.json"; 
 
         public static string ReturnValue(string key)
         {
